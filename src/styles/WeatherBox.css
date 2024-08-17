@@ -1,0 +1,16 @@
+.WeatherSet {
+  border: 3px solid white;
+}
+
+.currentCity {
+  color: white;
+}
+.currentTemp {
+  color: white;
+}
+.currentWeather {
+  color: white;
+}
+.currentHumidity {
+  color: white;
+}
