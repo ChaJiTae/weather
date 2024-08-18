@@ -1,15 +1,15 @@
 import React from "react";
-import "../styles/WeatherButton.css";
+// import "../styles/WeatherButton.css";
 
-export default function WeatherButton() {
+export default function WeatherButton({ cities, handleCity }) {
   return (
     <div>
-      <button>KOREA : SEOUL</button>
-      <button>KOREA : BUSAN</button>
-      <button>KOREA : GWANGJU</button>
-      <button>JAPAN : TOKYO</button>
-      <button>USA : NEW YORK</button>
-      <button>UK : LONDON</button>
+      <button onClick={() => handleCity("current")}>Current Location</button>
+      {cities.map((city, index) => (
+        <button key={index} onClick={() => handleCity(city)}>
+          {city}
+        </button>
+      ))}
     </div>
   );
 }

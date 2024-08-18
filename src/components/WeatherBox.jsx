@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/WeatherBox.css";
 
 export default function WeatherBox({ weather }) {
-  console.log(weather);
   return (
     <div className="WeatherSet">
       <div className="currentCity">{weather?.name}</div>
