@@ -1,5 +1,74 @@
+@font-face {
+  font-family: "Ownglyph_okticon-Bd";
+  src: url("./font/okticon_bold.ttf") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  /* outline: 1px solid red; */
+}
+
 body {
-  background: #111111;
+  background: #272727;
   height: 100vh;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleSet {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+}
+
+.titleImage {
+  width: 100px;
+  height: 100px;
+}
+
+.titleText {
+  color: white;
+  font-family: "Ownglyph_okticon-Bd";
+  font-size: 50px;
+}
+
+.contentContiner {
+  width: 700px;
+  height: 300px;
+}
+
+.loadingSet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.LoadingTitle {
+  color: white;
+  font-family: "Ownglyph_okticon-Bd";
+}
+
+.contentWeatherBox {
+  width: 100%;
+}
+
+.contentWeatherButton {
+  width: 100%;
+}
+
+.apiErrorTitle {
+  color: white;
+  font-family: "Ownglyph_okticon-Bd";
+  font-size: 30px;
+}
+
+.apiErrorText {
+  color: white;
+  font-family: "Ownglyph_okticon-Bd";
+  font-size: 12px;
 }

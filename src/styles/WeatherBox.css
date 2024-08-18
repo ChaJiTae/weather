@@ -1,15 +1,57 @@
 .WeatherSet {
   border: 3px solid white;
+  border-radius: 10px;
+  font-family: "Ownglyph_okticon-Bd";
+  height: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cityContainer {
+  display: flex;
+}
+.cityIcon {
+  width: 50px;
+  height: 50px;
 }
 .currentCity {
   color: white;
+  font-size: 40px;
+}
+.tempContainer {
+  display: flex;
+  align-items: center;
+}
+.tempIcon {
+  width: 50px;
+  height: 50px;
 }
 .currentTemp {
   color: white;
+  font-size: 25px;
+}
+.weatherIconContainer {
+  display: flex;
+  align-items: center;
+}
+.weatherIconThem {
+  width: 50px;
+  height: 50px;
 }
 .currentWeather {
   color: white;
+  font-size: 25px;
+}
+.humidityContainer {
+  display: flex;
+  align-items: center;
+}
+.humidityIcon {
+  width: 50px;
+  height: 50px;
 }
 .currentHumidity {
   color: white;
+  font-size: 25px;
 }

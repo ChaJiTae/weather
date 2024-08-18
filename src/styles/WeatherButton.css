@@ -1,0 +1,16 @@
+.weatherButtonSet {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.weatherButton {
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  font-family: "Ownglyph_okticon-Bd";
+  background-color: #bbc6d9;
+  border-radius: 10px;
+}

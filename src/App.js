@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import WeatherBox from "./components/WeatherBox";
 import WeatherButton from "./components/WeatherButton";
-import { ClipLoader } from "react-spinners";
+import weatherIcon from "./images/weatherIcon.png";
+import { FadeLoader } from "react-spinners";
 
 const apikey = process.env.REACT_APP_API_KEY;
 
@@ -72,16 +73,32 @@ function App() {
 
   return (
     <div>
-      {loading ? (
-        <ClipLoader color="#f88c6b" loading={loading} size={150} />
-      ) : !apiError ? (
-        <div className="container">
-          <WeatherBox weather={weather} />
-          <WeatherButton cities={cities} handleCity={handleCity} />
-        </div>
-      ) : (
-        <div>{apiError}</div>
-      )}
+      <div className="titleSet">
+        <img alt="weatherIcon" className="titleImage" src={weatherIcon} />
+        <h1 className="titleText">WEATHER WEP</h1>
+      </div>
+      <div className="contentContiner">
+        {loading ? (
+          <div className="loadingSet">
+            <FadeLoader color="#ffffff" loading={loading} size={150} />
+            <h1 className="LoadingTitle">데이터를 불러오고 있어요!</h1>
+          </div>
+        ) : !apiError ? (
+          <div className="contentWeatherSet">
+            <div className="contentWeatherBox">
+              <WeatherBox weather={weather} />
+            </div>
+            <div className="contentWeatherButton">
+              <WeatherButton cities={cities} handleCity={handleCity} />
+            </div>
+          </div>
+        ) : (
+          <div className="apiErrorContainer">
+            <div className="apiErrorTitle">오류가 발생하였습니다!</div>
+            <div className="apiErrorText">오류 코드 : {apiError}</div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
