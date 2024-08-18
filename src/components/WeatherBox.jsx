@@ -26,7 +26,7 @@ export default function WeatherBox({ weather }) {
           src={weatherIconThem}
         />
         <div className="currentWeather">
-          날씨 : {weather?.weather[0].description}
+          날씨 : {(weather?.weather[0].description).toUpperCase()}
         </div>
       </div>
       <div className="humidityContainer">
